@@ -11,7 +11,7 @@
   <main class="container">
     <hgroup>
       <h1>{{ keyword }}:</h1>
-      <h1>네이버:</h1>
+      <h3>KAKAO:</h3>
     </hgroup>
     <table class="striped">
       <thead data-theme="dark">
@@ -25,14 +25,14 @@
         </tr>
       </thead>
       <tbody>
-        {% for job_naver in jobs %}
+        {% for job in jobs_kakao %}
           <tr>
             <td><img src="{{ job.image_url }}" alt="이미지"></td>
-            <td>{{ job_naver.title }}</td>
-            <td>{{ job_naver.stars }}</td>
-            <td>{{ job_naver.author }}</td>
-            <td>{{ job_naver.series }}</td>
-            <td>{{ job_naver.free }}</td>
+            <td>{{ job.title }}</td>
+            <td>{{ job.stars }}</td>
+            <td>{{ job.author }}</td>
+            <td>{{ job.series }}</td>
+            <td>{{ job.free }}</td>
           </tr>
         {% endfor %}
       </tbody>
