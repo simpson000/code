@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novel_Free</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <hgroup>
+      <h1>{{ keyword }}:</h1>
+      <h1>네이버:</h1>
+    </hgroup>
+    <table class="striped">
+      <thead data-theme="dark">
+        <tr>
+          <th>이미지</th>
+          <th>제목</th>
+          <th>별점</th>
+          <th>작가</th>
+          <th>시리즈수</th>
+          <th>무료</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job_naver in jobs %}
+          <tr>
+            <td><img src="{{ job.image_url }}" alt="이미지"></td>
+            <td>{{ job_naver.title }}</td>
+            <td>{{ job_naver.stars }}</td>
+            <td>{{ job_naver.author }}</td>
+            <td>{{ job_naver.series }}</td>
+            <td>{{ job_naver.free }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
